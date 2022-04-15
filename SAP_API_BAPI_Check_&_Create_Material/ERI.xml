@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Owners>
+  <OwnerId>5</OwnerId>
+  <OwnerType>TEST</OwnerType>
+  <Name><![CDATA[SAP_API_BAPI_Check_&_Create_Material]]></Name>
+  <FSRoot><![CDATA[Test\5\5\2]]></FSRoot>
+  <FSPath><![CDATA[Test\5\5\2]]></FSPath>
+  <QCPath><![CDATA[Subject\UFT Tests\SAP_API_BAPI_Check_&_Create_Material]]></QCPath>
+  <Owner>
+    <OwnerId>5</OwnerId>
+    <OwnerType>TEST</OwnerType>
+    <Name><![CDATA[SAP_API_BAPI_Check_&_Create_Material]]></Name>
+    <FSRoot><![CDATA[Test\5\5\2]]></FSRoot>
+    <FSPath><![CDATA[Test\5\5\2]]></FSPath>
+    <QCPath><![CDATA[Subject\UFT Tests\SAP_API_BAPI_Check_&_Create_Material]]></QCPath>
+    <Relation>
+      <RelatedId>1186</RelatedId>
+      <RelatedType>USER_ASSETS</RelatedType>
+      <Name><![CDATA[SAP_API_BAPI_Check_&_Create_Material]]></Name>
+      <FSRoot><![CDATA[Test\5\5\2]]></FSRoot>
+      <FSPath><![CDATA[Test\5\5\2]]></FSPath>
+      <QCPath><![CDATA[Subject\UFT Tests\SAP_API_BAPI_Check_&_Create_Material]]></QCPath>
+    </Relation>
+  </Owner>
+</Owners>
+

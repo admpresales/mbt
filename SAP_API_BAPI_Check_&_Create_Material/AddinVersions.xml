@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AddinVersions>
+  <AddinVersion AddinId="HP.ST.STFRAMEWORKUPGRADERSADDIN" Version="2021.1.0.184" />
+  <AddinVersion AddinId="HP.ST.VTDBASICACTIVITY" Version="2021.1.0.184" />
+  <AddinVersion AddinId="HP.ST.SAPTECHNOLOGIES" Version="2021.1.0.184" />
+</AddinVersions>

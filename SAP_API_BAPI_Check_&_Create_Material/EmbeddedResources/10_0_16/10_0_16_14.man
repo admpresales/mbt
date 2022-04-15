@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>7e6b386f-7d87-4c5d-a9dc-4f8418cbeb4c</ID>
+  <Name>10_0_16_14</Name>
+  <Type>SapRFC</Type>
+  <Version>1</Version>
+  <CreationDate>2013-07-19T20:51:45.823375+00:00</CreationDate>
+  <UpdateDate>2013-07-19T20:51:45.823375+00:00</UpdateDate>
+  <LoaderID>SignatureResourceHandler</LoaderID>
+  <MetaDataSignatureFile>7705837d_c2dc_4110_ab73_3a72e54f441e.xml</MetaDataSignatureFile>
+  <TestResourceId>7705837d_c2dc_4110_ab73_3a72e54f441e</TestResourceId>
+  <RepositoryType>TestRepository</RepositoryType>
+  <SignatureCodonId>HP.ST.SapRfc</SignatureCodonId>
+  <SignatureAddinVersion>11.51.1546.0</SignatureAddinVersion>
+  <Properties>
+    <Item>
+      <Key>
+        <string>RepositoryPath</string>
+      </Key>
+      <Value>
+        <string>C:\Users\demo\Documents\Unified Functional Testing\github\mbt\SAP_API_BAPI_Check_&amp;_Create_Material\EmbeddedResources</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>ResourceOrigin</string>
+      </Key>
+      <Value>
+        <string>C:\Users\demo\Documents\Unified Functional Testing\github\mbt\SAP_API_BAPI_Check_&amp;_Create_Material\EmbeddedResources\10_0_16</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>PrototypeDbVersion</string>
+      </Key>
+      <Value>
+        <string>11.51.1546.0</string>
+      </Value>
+    </Item>
+  </Properties>
+</ResourceManifest>
