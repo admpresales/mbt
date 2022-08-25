@@ -4,3 +4,4 @@ AIUtil.SetContext AppContext																'Tell the AI engine to point at the 
 
 AIUtil("profile").Click																		'Click the profile icon
 AIUtil.FindTextBlock("Sign out").Click														'Click the Sign out text
+AppContext.Close																			'Close the browser
