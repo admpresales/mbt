@@ -2,6 +2,7 @@
 
 AIUtil.SetContext AppContext																'Tell the AI engine to point at the application
 
+AIUtil("profile").Hover
 AIUtil("shopping_cart").Hover
 AIUtil.RunSettings.AutoScroll.Disable
 While AIUtil("close", micAnyText, micFromTop, 1).Exist(0)
