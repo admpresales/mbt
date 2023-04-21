@@ -6,6 +6,7 @@ AIUtil("search").Search Parameter.Item("SearchText")										'Search for the pr
 AppContext.Sync																			'Wait for the browser to stop spinning
 AIUtil("close").Click																			'Close the search diaglog
 AppContext.Sync																			'Wait for the browser to stop spinning
-AIUtil.FindTextBlock(micAnyText, micWithAnchorBelow, AIUtil.FindTextBlock("Search result: 'speakers'")).Click	'Click on the text wtih the string "Search result: 'speakers'" directly below it
+AIUtil("close").CheckExists False
+AIUtil.FindTextBlock(micAnyText, micWithAnchorOnRight, AIUtil("search")).Click
 AppContext.Sync																			'Wait for the browser to stop spinning
 
