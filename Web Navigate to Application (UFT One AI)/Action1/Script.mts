@@ -1,7 +1,8 @@
 ﻿Dim BrowserExecutable, oShell
 
+Reporter.ReportEvent micDone, "Setting SnapshotReportMode", "Setting the value to 0 so as to always log snapshots"
 Setting("SnapshotReportMode") = 0 														'always captures images
- 
+
 Set oShell = CreateObject ("WSCript.shell")													'Instantiate the ability to run a command in the OS
 oShell.run "powershell -command ""Start-Service mediaserver"""							'Statement to start the mediaserver
 Set oShell = Nothing																		'Clear the variable for the shell
