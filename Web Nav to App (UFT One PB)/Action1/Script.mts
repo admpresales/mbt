@@ -1,5 +1,6 @@
 ﻿Dim BrowserExecutable, oShell
 
+Setting("SnapshotReportMode") = 0 														'always captures images
 While Browser("CreationTime:=0").Exist(0)   													'Loop to close all open browsers
 	Browser("CreationTime:=0").Close 														'Statement to close the first browser UFT One can see
 Wend
