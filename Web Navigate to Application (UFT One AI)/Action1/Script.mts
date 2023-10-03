@@ -14,6 +14,10 @@ BrowserExecutable = Parameter.Item("BrowserName") & ".exe"								'Set the brows
 SystemUtil.Run BrowserExecutable,"","","",3												'launch the browser specified in the data table
 Set AppContext=Browser("CreationTime:=0")												'Set the variable for what application (in this case the browser) we are acting upon
 
+AIUtil.SetContext AppContext																'Tell the AI engine to point at the application
+AIUtil.Context.SetBrowserScope(BrowserWindow)
+AIUtil("close", micAnyText, micFromLeft, 1).CheckExists TRUE
+AIUtil.Context.SetBrowserScope(WebPage)
 AppContext.ClearCache																		'Clear the browser cache to ensure you're getting the latest forms from the application
 AppContext.Navigate Parameter.Item("URL") 												'Navigate to the application URL
 AppContext.Maximize																		'Maximize the application to give the best chance that the fields will be visible on the screen
