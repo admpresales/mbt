@@ -1,4 +1,4 @@
-﻿Dim BrowserExecutable, oShell
+﻿Dim BrowserExecutable, oShell, counter
 
 Reporter.ReportEvent micDone, "Setting SnapshotReportMode", "Setting the value to 0 so as to always log snapshots"
 Setting("SnapshotReportMode") = 0 														'always captures images
@@ -21,5 +21,10 @@ AIUtil.Context.SetBrowserScope(WebPage)
 AppContext.ClearCache																		'Clear the browser cache to ensure you're getting the latest forms from the application
 AppContext.Navigate Parameter.Item("URL") 												'Navigate to the application URL
 AppContext.Maximize																		'Maximize the application to give the best chance that the fields will be visible on the screen
+counter = 0
+While Browser("CreationTime:=" & counter).Exist(0)
+	Reporter.ReportEvent micDone, "Checking Browser Open", "Browser " & counter & " is open"
+	counter = counter + 1
+Wend
 'AppContext.Sync																			'Wait for the browser to stop spinning
 
