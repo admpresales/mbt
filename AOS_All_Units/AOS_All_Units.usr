@@ -35,6 +35,7 @@ AOS_Popular_Items=Action20\Script.mts
 AOS_Help_About=Action21\Script.mts
 AOS_Help_AOS_Versions=Action22\Script.mts
 AOS_Help_Management_Console=Action23\Script.mts
+AOS_Search=Action24\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -143,3 +144,6 @@ Action22\ObjectRepository.bdb=
 Action23\Script.mts=
 Action23\Resource.mtr=
 Action23\ObjectRepository.bdb=
+Action24\Script.mts=
+Action24\Resource.mtr=
+Action24\ObjectRepository.bdb=

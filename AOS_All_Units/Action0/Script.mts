@@ -21,3 +21,4 @@ RunAction "AOS_Popular_Items", oneIteration
 RunAction "AOS_Help_About", oneIteration
 RunAction "AOS_Help_AOS_Versions", oneIteration
 RunAction "AOS_Help_Management_Console", oneIteration
+RunAction "AOS_Search", oneIteration
