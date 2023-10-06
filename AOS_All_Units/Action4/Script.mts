@@ -1,5 +1,7 @@
 ﻿Dim UnitStatus
 
+Setting.Item("SnapshotReportMode")=0
+
 Select Case Parameter.Item("Status")
 	Case "Pass"
 		UnitStatus = micPass
