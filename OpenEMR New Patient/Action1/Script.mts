@@ -12,7 +12,7 @@ While Browser("CreationTime:=0").Exist(0)
 Wend
 
 'Set the BrowserExecutable variable to be the .exe for the browser declared in the datasheet
-BrowserExecutable = DataTable.Value("BrowserName") & ".exe"
+BrowserExecutable = Parameter.Item("Browser") & ".exe"
 
 'Launch the browser specified in the data table
 SystemUtil.Run BrowserExecutable,"","","",3												
@@ -23,7 +23,9 @@ Set AppContext=Browser("CreationTime:=0")
 'Clear the browser cache to ensure you're getting the latest forms from the application
 AppContext.ClearCache																		
 
-'Navigate to the application URL
+'===========================================================================================
+'BP:  Nav to the login URL of the application
+'===========================================================================================
 AppContext.Navigate Parameter.Item("URL")	
 
 'Maximize the application to give the best chance that the fields will be visible on the screen
@@ -36,12 +38,14 @@ AppContext.Sync
 AIUtil.SetContext AppContext																
 
 '===========================================================================================
-'BP:  View products from home page
+'BP:  Verify that the username and password fields and Login button appear
 '===========================================================================================
 
-'===========================================================================================
-'BP:  Login
-'===========================================================================================
+AIUtil("text_box", "Username").CheckExists True
+AIUtil.Context.Freeze
+AIUtil("text_box", "Password").CheckExists True
+AIUtil("button", "Login").CheckExists True
+AIUtil.Context.UnFreeze
 
 '===========================================================================================
 'BP:  Logout

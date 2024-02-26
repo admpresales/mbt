@@ -13,6 +13,8 @@ DevelopTool=AQT
 [Actions]
 Action0=Action0\Script.mts
 OpenEMR_Launch_URL=Action1\Script.mts
+OpenEMR_Practice_Login=Action2\Script.mts
+OpenEMR_Add_New_Patient=Action3\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -55,3 +57,9 @@ Action0\ObjectRepository.bdb=
 Action1\Script.mts=
 Action1\Resource.mtr=
 Action1\ObjectRepository.bdb=
+Action2\Script.mts=
+Action2\Resource.mtr=
+Action2\ObjectRepository.bdb=
+Action3\Script.mts=
+Action3\Resource.mtr=
+Action3\ObjectRepository.bdb=
