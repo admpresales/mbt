@@ -49,9 +49,9 @@ AIUtil.FindText("Confirm Create New Patient").Click
 AIUtil.SetContext Browser("CreationTime:=0")
 AIUtil.FindTextBlock("Create", micWithAnchorAbove, AIUtil.FindTextBlock("Credentials")).Click
 Parameter.Item("NewPatientLogin") = AIUtil("text_box", "Account Name:").GetValue
-'msgbox Parameter.Item("NewPatientLogin")
+print "The new patient login is " & Parameter.Item("NewPatientLogin")
 Parameter.Item("NewPatientPassword") = Browser("OpenEMR").Page("OpenEMR").Frame("modalframe").WebEdit("pwd").GetROProperty("Value")
-'msgbox Parameter.Item("NewPatientPassword")
+print "The new patient password is " & Parameter.Item("NewPatientPassword")
 AIUtil("button", "Save").Click
 AIUtil.Context.SetBrowserScope(BrowserWindow)
 AIUtil("button", "Cancel").Click
