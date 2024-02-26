@@ -47,9 +47,6 @@ AIUtil("text_box", "Password").CheckExists True
 AIUtil("button", "Login").CheckExists True
 AIUtil.Context.UnFreeze
 
-'===========================================================================================
-'BP:  Logout
-'===========================================================================================
 
 'Close the application at the end of your script
 'AppContext.Close																			
