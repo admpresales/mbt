@@ -66,7 +66,7 @@ AIUtil.Scroll "down", 5
 AIUtil.FindTextBlock("Choices").Click
 AIUtil.Scroll "down", 1
 AIUtil("combobox", "Allow Patient Portal:").Select "YES"
-AIUtil.Scroll "down", 5
+AIUtil.Scroll "down", 10
 AIUtil("button", "Create New Patient").Click
 AIUtil.FindText("Confirm Create New Patient").Click
 
@@ -85,7 +85,9 @@ While  (AIUtil.FindTextBlock("Credentials").Exist(0) = FALSE)
 	End If
 Wend
 AIUtil.FindTextBlock("Create", micWithAnchorAbove, AIUtil.FindTextBlock("Credentials")).Click
-Parameter.Item("NewPatientLogin") = AIUtil("text_box", "Account Name:").GetValue
+'The patient login is the e-mail, not the patient account name in the patient portal
+'Parameter.Item("NewPatientLogin") = AIUtil("text_box", "Account Name:").GetValue
+Parameter.Item("NewPatientLogin") = Parameter.Item("NewPatientEmail")
 print "The new patient login is " & Parameter.Item("NewPatientLogin")
 DataTable.Value("NewPatientLogin") = Parameter.Item("NewPatientLogin")
 print "The value in the datatable for NewPatientLogin is " & DataTable.Value("NewPatientLogin")

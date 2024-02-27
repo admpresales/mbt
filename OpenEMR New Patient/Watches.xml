@@ -1,1 +1,3 @@
-﻿<Properties />
+﻿<Properties>
+  <WatchEntry0 value="AIUtil.FindText(&quot;Log In&quot;).highlight" />
+</Properties>
