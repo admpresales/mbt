@@ -19,8 +19,15 @@ AIUtil.SetContext Browser("CreationTime:=0")
 '===========================================================================================
 'BP:  Navigate to the New/Search Patient screen
 '===========================================================================================
-
-AIUtil.FindText("Patient").Hover
+counter = 0
+Do
+	AIUtil.FindText("Patient").Hover
+	counter = counter + 1
+	If counter >= 10 Then
+		Reporter.ReportEvent micFail, "Find New/Search Text", "The New/Search text wasn't found after trying to hover over Patient " & counter & " times."
+		ExitTest
+	End If
+Loop While (AIUtil.FindTextBlock("New/Search").Exist(0) = FALSE)
 
 AIUtil.FindTextBlock("New/Search").Click
 
@@ -55,6 +62,10 @@ AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Truste
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Contact Email:")).SetText Parameter.Item("NewPatientEmail")
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Contact Email:")).Click
 AIUtil.Context.UnFreeze
+AIUtil.Scroll "down", 5
+AIUtil.FindTextBlock("Choices").Click
+AIUtil.Scroll "down", 1
+AIUtil("combobox", "Allow Patient Portal:").Select "YES"
 AIUtil.Scroll "down", 5
 AIUtil("button", "Create New Patient").Click
 AIUtil.FindText("Confirm Create New Patient").Click
