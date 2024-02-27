@@ -40,7 +40,9 @@ AIUtil.SetContext AppContext
 '===========================================================================================
 'BP:  Verify that the username and password fields and Login button appear
 '===========================================================================================
-
+If AIUtil.FindTextBlock("OpenEMR Product Registration").Exist(0) Then
+	AIUtil("button", "No Thanks").Click	
+End If
 AIUtil("text_box", "Username").CheckExists True
 AIUtil.Context.Freeze
 AIUtil("text_box", "Password").CheckExists True
