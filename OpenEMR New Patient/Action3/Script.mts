@@ -52,6 +52,8 @@ print "The value in the datatable for NewPatientEmail is " & DataTable.Value("Ne
 AIUtil.Context.Freeze
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Trusted Email:")).SetText Parameter.Item("NewPatientEmail")
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Trusted Email:")).Click
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Contact Email:")).SetText Parameter.Item("NewPatientEmail")
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Contact Email:")).Click
 AIUtil.Context.UnFreeze
 AIUtil.Scroll "down", 5
 AIUtil("button", "Create New Patient").Click
