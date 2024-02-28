@@ -47,8 +47,8 @@ Set Anchor = AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor)
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientLastName")
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
 AIUtil("combobox", "Sex:").Select Parameter.Item("NewPatientSex")
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("DOB:")).SetText Parameter.Item("NewPaitientDOB")
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("DOB:")).Click
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindText("DOB")).SetText Parameter.Item("NewPaitientDOB")
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindText("DOB")).Click
 AIUtil.Context.UnFreeze
 AIUtil.FindTextBlock("Contact").Click
 AIUtil.Scroll "down", 5
@@ -78,6 +78,8 @@ AIUtil.SetContext Browser("CreationTime:=0")
 counter = 0
 While  (AIUtil.FindTextBlock("Credentials").Exist(0) = FALSE)
 	AIUtil.FindText("Patient Portal / API Access").Click
+	'Add hover to profile as the underline when hovered over the text in the previous statement causes the standard OCR to not find the text on the next iteration
+	AIUtil("profile", micAnyText, micFromTop, 1).Hover
 	counter = counter + 1
 	If counter >= 10 Then
 		Reporter.ReportEvent micFail, "Find Credentials Text", "The Credentials text wasn't found after trying to expand Patient Portal / API Access " & counter & " times."

@@ -46,7 +46,9 @@ End If
 AIUtil("text_box", "Username").CheckExists True
 AIUtil.Context.Freeze
 AIUtil("text_box", "Password").CheckExists True
-AIUtil("button", "Login").CheckExists True
+AIUtil("button", micAnyText, micWithAnchorOnRight, AIUtil("combobox", "Language")).CheckExists True
+'If you use ABBYY the below statement works.  The default OCR can't see the white text on the blue background
+'AIUtil("text_box", "Username").CheckExists True
 AIUtil.Context.UnFreeze
 
 
