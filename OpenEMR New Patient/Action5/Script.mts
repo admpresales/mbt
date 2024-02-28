@@ -47,7 +47,15 @@ AIUtil.SetContext AppContext
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Username")).SetText Parameter.Item("UserName")
 AIUtil.Context.Freeze
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Password")).SetText Parameter.Item("Password")
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("E-Mail Address")).SetText Parameter.Item("Email")
+Set textbox= AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("E-Mail Address"))
+Set combobox= AIUtil("combobox", "", micWithAnchorOnLeft, AIUtil.FindTextBlock("E-Mail Address"))
+If textbox.Exist(0) Then
+
+    textbox.SetText Parameter.Item("Email")
+Else 
+
+    combobox.SetText Parameter.Item("Email")
+End If
 AIUtil.Scroll "down", 1
 'AIUtil("button", "Log In").Click
 Browser("Patient Portal Login").Page("Patient Portal Login").WebButton("Log In").Click
