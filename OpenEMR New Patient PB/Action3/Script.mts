@@ -24,17 +24,17 @@ Browser("OpenEMR").Page("OpenEMR").WebElement("New/Search").Click @@ script info
 'BP:  Enter in the new patient information
 '===========================================================================================
 Parameter.Item("NewPatientEmail") = fnRandomNumberWithDateTimeStamp & "@opentext.com"
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_fname").Set Parameter.Item("NewPatientFirstName")
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_mname").Set Parameter.Item("NewPatientMiddleName") @@ script infofile_;_ZIP::ssf3.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_lname").Set Parameter.Item("NewPatientLastName") @@ script infofile_;_ZIP::ssf4.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_DOB").Set Parameter.Item("NewPatientDOB") @@ script infofile_;_ZIP::ssf5.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebList("form_sex").Select Parameter.Item("NewPatientSex") @@ script infofile_;_ZIP::ssf6.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebButton("Contact").Click @@ script infofile_;_ZIP::ssf7.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_email_direct").Set Parameter.Item("NewPatientEmail") @@ script infofile_;_ZIP::ssf8.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebEdit("form_email").Set Parameter.Item("NewPatientEmail") @@ script infofile_;_ZIP::ssf9.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebButton("Choices").Click @@ script infofile_;_ZIP::ssf10.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebList("form_allow_patient_portal").Select "YES" @@ script infofile_;_ZIP::ssf11.xml_;_
-Browser("OpenEMR").Page("OpenEMR").Frame("Frame").WebButton("Create New Patient").Click @@ script infofile_;_ZIP::ssf12.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_fname").Set Parameter.Item("NewPatientFirstName")
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_mname").Set Parameter.Item("NewPatientMiddleName") @@ script infofile_;_ZIP::ssf3.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_lname").Set Parameter.Item("NewPatientLastName") @@ script infofile_;_ZIP::ssf4.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_DOB").Set Parameter.Item("NewPatientDOB") @@ script infofile_;_ZIP::ssf5.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebList("form_sex").Select Parameter.Item("NewPatientSex") @@ script infofile_;_ZIP::ssf6.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebButton("Contact").Click @@ script infofile_;_ZIP::ssf7.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_email_direct").Set Parameter.Item("NewPatientEmail") @@ script infofile_;_ZIP::ssf8.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebEdit("form_email").Set Parameter.Item("NewPatientEmail") @@ script infofile_;_ZIP::ssf9.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebButton("Choices").Click @@ script infofile_;_ZIP::ssf10.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebList("form_allow_patient_portal").Select "YES" @@ script infofile_;_ZIP::ssf11.xml_;_
+Browser("OpenEMR").Page("OpenEMR").Frame("Search or Add Patient Frame").WebButton("Create New Patient").Click @@ script infofile_;_ZIP::ssf12.xml_;_
 Browser("OpenEMR").Page("OpenEMR_2").Frame("modalframe").WebButton("Confirm Create New Patient").Click
 '===========================================================================================
 'BP:  Setup Patient Portal Access
