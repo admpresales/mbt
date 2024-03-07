@@ -70,7 +70,7 @@ AIUtil.Scroll "down", 10
 AIUtil("button", "Create New Patient").Click
 counter = 0
 While AIUtil.FindText("Confirm Create New Patient").Exist(0) = FALSE
-	AIUtil.ScrollOnObject AIUtil.Table, "down", 1
+	AIUtil.ScrollOnObject AIUtil.Table, "down", 10
 	counter = counter + 1
 	If counter >= 100 Then
 		Reporter.ReportEvent micFail, "Find Confirm Create New Patient Button", "The Confirm Create New Patient Button wasn't found after trying to scroll " & counter & " times."
