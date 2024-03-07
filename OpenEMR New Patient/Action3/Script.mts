@@ -87,8 +87,8 @@ AIUtil.SetContext Browser("CreationTime:=0")
 counter = 0
 While  (AIUtil.FindTextBlock("Credentials").Exist(0) = FALSE)
 	AIUtil.FindText("Patient Portal / API Access").Click
-	'Add hover to profile as the underline when hovered over the text in the previous statement causes the standard OCR to not find the text on the next iteration
-	AIUtil("profile", micAnyText, micFromTop, 1).Hover
+	'Add hover to search as the underline when hovered over the text in the previous statement causes the standard OCR to not find the text on the next iteration
+	AIUtil("search").Hover
 	counter = counter + 1
 	If counter >= 10 Then
 		Reporter.ReportEvent micFail, "Find Credentials Text", "The Credentials text wasn't found after trying to expand Patient Portal / API Access " & counter & " times."
