@@ -1,3 +1,4 @@
 ﻿<Properties>
-  <WatchEntry0 value="AIUtil.FindText(&quot;Patient Portal / API Access&quot;).highlight" />
+  <WatchEntry0 value="Anchor.highlight" />
+  <WatchEntry1 value="AIUtil(&quot;text_box&quot;, micAnyText, micWithAnchorOnLeft, Anchor).highlight" />
 </Properties>

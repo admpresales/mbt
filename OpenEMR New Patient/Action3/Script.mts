@@ -37,6 +37,7 @@ AIUtil.FindTextBlock("New/Search").Click
 
 
 Set Anchor = AIUtil.FindTextBlock("Name:")
+Anchor.Click
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientFirstName")
 AIUtil.Context.Freeze
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
