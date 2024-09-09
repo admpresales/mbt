@@ -36,9 +36,10 @@ Lang=none
 
 [TulipInfo]
 ProductName=OpenText UFT One
-Version=23.4
+Version=24.2
 
 [TulipAddins]
+AF=
 AI=
 Database=
 File Content=

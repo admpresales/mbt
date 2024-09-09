@@ -61,16 +61,32 @@ AIUtil.Scroll "down", 1
 Browser("Patient Portal Login").Page("Patient Portal Login").WebButton("Log In").Click
 AIUtil.Context.UnFreeze
 AIUtil("text_box", "Password", micWithAnchorOnLeft, AIUtil.FindTextBlock("Current")).SetText Parameter.Item("Password")
+AIUtil.SetContext Browser("CreationTime:=0")
 AIUtil.Context.Freeze
-AIUtil("text_box", "Password", micWithAnchorOnLeft, AIUtil.FindTextBlock("New", micFromTop, 1)).SetText Parameter.Item("NewPassword")
-AIUtil("text_box", "Confirm", micWithAnchorOnLeft, AIUtil.FindTextBlock("New", micFromBottom, 1)).SetText Parameter.Item("NewPassword")
-AIUtil("text_box", "Confirm", micWithAnchorOnLeft, AIUtil.FindTextBlock("Email")).SetText Parameter.Item("UserName")
+'DJ20240909 UX change, handling new UX
+If AIUtil.FindTextBlock("New", micFromTop, 1).Exist(0) Then
+	AIUtil("text_box", "Password", micWithAnchorOnLeft, AIUtil.FindTextBlock("New", micFromTop, 1)).SetText Parameter.Item("NewPassword")
+Else
+	AIUtil("text_box", "New Password").SetText Parameter.Item("NewPassword")
+End If
+If AIUtil.FindTextBlock("New", micFromBottom, 1).Exist(0) Then
+	AIUtil("text_box", "Confirm", micWithAnchorOnLeft, AIUtil.FindTextBlock("New", micFromBottom, 1)).SetText Parameter.Item("NewPassword")
+Else
+	AIUtil("text_box", "Confirm New").SetText Parameter.Item("NewPassword")
+End If
+If AIUtil("text_box", "Confirm", micWithAnchorOnLeft, AIUtil.FindTextBlock("Email")).Exist(0) Then
+	AIUtil("text_box", "Confirm", micWithAnchorOnLeft, AIUtil.FindTextBlock("Email")).SetText Parameter.Item("UserName")
+Else
+	
+	AIUtil("text_box", "Confirm Email").SetText Parameter.Item("UserName")
+End If
 AIUtil("button", "Log In").Click
 AIUtil.Context.UnFreeze
-AIUtil("down_triangle", micAnyText, micWithAnchorOnRight, AIUtil.FindTextBlock("Reports")).Click
+If AIUtil("down_triangle", micAnyText, micWithAnchorOnRight, AIUtil.FindTextBlock("Reports")).Exist(0) Then
+	AIUtil("down_triangle", micAnyText, micWithAnchorOnRight, AIUtil.FindTextBlock("Reports")).Click
+End If
 AIUtil.FindText("Logout").Click
 AIUtil.FindTextBlock("You have been successfully logged out.").CheckExists True
 DataTable.Value("NewPatientPassword") = Parameter.Item("NewPassword")
 
 AppContext.Close
-
