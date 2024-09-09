@@ -56,7 +56,10 @@ Browser("Patient Portal Login").Page("Patient Portal Login_2").WebEdit("Confirm 
 Browser("Patient Portal Login").Page("Patient Portal Login_2").WebEdit("Confirm Email").Set Parameter.Item("Email")
 Browser("Patient Portal Login").Page("Patient Portal Login_2").WebButton("Log In").Click
 
-Browser("Patient Portal Login").Page("Home | OpenEMR Portal").WebButton("User Menu Drop Down").Click
+'DJ20240909 Handling UX change, Logout is no longer buried in a menu.
+If Browser("Patient Portal Login").Page("Home | OpenEMR Portal").WebButton("User Menu Drop Down").Exist(0) Then
+	Browser("Patient Portal Login").Page("Home | OpenEMR Portal").WebButton("User Menu Drop Down").Click
+End If
 Browser("Patient Portal Login").Page("Home | OpenEMR Portal").Link("Logout").Click
 
 AppContext.Close
