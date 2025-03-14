@@ -35,8 +35,8 @@ Default Profile=default.usp
 Lang=none
 
 [TulipInfo]
-ProductName=OpenText UFT One
-Version=24.2
+ProductName=OpenText Functional Testing
+Version=24.4
 
 [TulipAddins]
 AF=
@@ -44,9 +44,14 @@ AI=
 Database=
 File Content=
 Insight=
+SAP NWBC Desktop=
+SAP=
+SAPUI5=
+SAPWebExt=
 Windows Applications=
 TEA=
 Web=
+WPF=
 XML=
 
 [ExtraFiles]

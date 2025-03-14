@@ -60,7 +60,9 @@ AIUtil.Scroll "down", 1
 'AIUtil("button", "Log In").Click
 Browser("Patient Portal Login").Page("Patient Portal Login").WebButton("Log In").Click
 AIUtil.Context.UnFreeze
-AIUtil("text_box", "Password", micWithAnchorOnLeft, AIUtil.FindTextBlock("Current")).SetText Parameter.Item("Password")
+'DJ20250314 Updated to use micAnyText instead of the "Password" text
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindTextBlock("Current")).SetText Parameter.Item("Password")
+'AIUtil("text_box", "Password", micWithAnchorOnLeft, AIUtil.FindTextBlock("Current")).SetText Parameter.Item("Password")
 AIUtil.SetContext Browser("CreationTime:=0")
 AIUtil.Context.Freeze
 'DJ20240909 UX change, handling new UX

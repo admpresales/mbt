@@ -1,3 +1,3 @@
 ﻿<Properties>
-  <WatchEntry0 value=" AIUtil.FindTextBlock(&quot;Confirm Email&quot;).highlight" />
+  <WatchEntry0 value="AIUtil(&quot;text_box&quot;, micAnyText, micWithAnchorOnLeft, Anchor).highlight" />
 </Properties>

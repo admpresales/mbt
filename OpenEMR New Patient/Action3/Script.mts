@@ -38,12 +38,14 @@ AIUtil.FindTextBlock("New/Search").Click
 
 Set Anchor = AIUtil.FindTextBlock("Name:")
 Anchor.Click
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientFirstName")
 AIUtil.Context.Freeze
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientFirstName")
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
-Set Anchor = AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor)
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientMiddleName")
-AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
+'DJ20250314 - The new 24.4 AI model incorrectly recognizes the middlename field as a button now, feedback submitted to Mazzy to get fixed in the model
+'				The middle name field isn't a required field, so from a business process perspective, we just won't fill that out.
+'Set Anchor = AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor)
+'AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientMiddleName")
+'AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
 Set Anchor = AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor)
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).SetText Parameter.Item("NewPatientLastName")
 AIUtil("text_box", micAnyText, micWithAnchorOnLeft, Anchor).Click
